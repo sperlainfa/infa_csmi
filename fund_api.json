@@ -1,0 +1,236 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "www.alphavantage.co",
+  "basePath" : "",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "query" : {
+      "get" : {
+        "tags" : [ "fund_api" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "fund_api",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "symbol",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "apikey",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "function",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/fund_api"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "fund_api" : {
+      "properties" : {
+        "Symbol" : {
+          "type" : "string"
+        },
+        "AssetType" : {
+          "type" : "string"
+        },
+        "Name" : {
+          "type" : "string"
+        },
+        "Description" : {
+          "type" : "string"
+        },
+        "Exchange" : {
+          "type" : "string"
+        },
+        "Currency" : {
+          "type" : "string"
+        },
+        "Country" : {
+          "type" : "string"
+        },
+        "Sector" : {
+          "type" : "string"
+        },
+        "Industry" : {
+          "type" : "string"
+        },
+        "Address" : {
+          "type" : "string"
+        },
+        "FullTimeEmployees" : {
+          "type" : "string"
+        },
+        "FiscalYearEnd" : {
+          "type" : "string"
+        },
+        "LatestQuarter" : {
+          "type" : "string"
+        },
+        "MarketCapitalization" : {
+          "type" : "string"
+        },
+        "EBITDA" : {
+          "type" : "string"
+        },
+        "PERatio" : {
+          "type" : "string"
+        },
+        "PEGRatio" : {
+          "type" : "string"
+        },
+        "BookValue" : {
+          "type" : "string"
+        },
+        "DividendPerShare" : {
+          "type" : "string"
+        },
+        "DividendYield" : {
+          "type" : "string"
+        },
+        "EPS" : {
+          "type" : "string"
+        },
+        "RevenuePerShareTTM" : {
+          "type" : "string"
+        },
+        "ProfitMargin" : {
+          "type" : "string"
+        },
+        "OperatingMarginTTM" : {
+          "type" : "string"
+        },
+        "ReturnOnAssetsTTM" : {
+          "type" : "string"
+        },
+        "ReturnOnEquityTTM" : {
+          "type" : "string"
+        },
+        "RevenueTTM" : {
+          "type" : "string"
+        },
+        "GrossProfitTTM" : {
+          "type" : "string"
+        },
+        "DilutedEPSTTM" : {
+          "type" : "string"
+        },
+        "QuarterlyEarningsGrowthYOY" : {
+          "type" : "string"
+        },
+        "QuarterlyRevenueGrowthYOY" : {
+          "type" : "string"
+        },
+        "AnalystTargetPrice" : {
+          "type" : "string"
+        },
+        "TrailingPE" : {
+          "type" : "string"
+        },
+        "ForwardPE" : {
+          "type" : "string"
+        },
+        "PriceToSalesRatioTTM" : {
+          "type" : "string"
+        },
+        "PriceToBookRatio" : {
+          "type" : "string"
+        },
+        "EVToRevenue" : {
+          "type" : "string"
+        },
+        "EVToEBITDA" : {
+          "type" : "string"
+        },
+        "Beta" : {
+          "type" : "string"
+        },
+        "52WeekHigh" : {
+          "type" : "string"
+        },
+        "52WeekLow" : {
+          "type" : "string"
+        },
+        "50DayMovingAverage" : {
+          "type" : "string"
+        },
+        "200DayMovingAverage" : {
+          "type" : "string"
+        },
+        "SharesOutstanding" : {
+          "type" : "string"
+        },
+        "SharesFloat" : {
+          "type" : "string"
+        },
+        "SharesShort" : {
+          "type" : "string"
+        },
+        "SharesShortPriorMonth" : {
+          "type" : "string"
+        },
+        "ShortRatio" : {
+          "type" : "string"
+        },
+        "ShortPercentOutstanding" : {
+          "type" : "string"
+        },
+        "ShortPercentFloat" : {
+          "type" : "string"
+        },
+        "PercentInsiders" : {
+          "type" : "string"
+        },
+        "PercentInstitutions" : {
+          "type" : "string"
+        },
+        "ForwardAnnualDividendRate" : {
+          "type" : "string"
+        },
+        "ForwardAnnualDividendYield" : {
+          "type" : "string"
+        },
+        "PayoutRatio" : {
+          "type" : "string"
+        },
+        "DividendDate" : {
+          "type" : "string"
+        },
+        "ExDividendDate" : {
+          "type" : "string"
+        },
+        "LastSplitFactor" : {
+          "type" : "string"
+        },
+        "LastSplitDate" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
