@@ -1,0 +1,451 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "apps.inventorycc.com",
+  "basePath" : "/apis",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/batchinventorydc/api/BatchInventory" : {
+      "get" : {
+        "tags" : [ "batchinventorydc" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "batchinventorydc",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "ApiKey",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dealers",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/batchinventorydc"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "batchinventorydc##Inventory##listOfVehicles##VehicleInfo##ExtendedDescriptions" : {
+      "properties" : {
+        "ExtendedVehicleName" : {
+          "type" : "string"
+        },
+        "ExtendedBodyStyle" : {
+          "type" : "string"
+        },
+        "ExtendedDrivetrain" : {
+          "type" : "string"
+        },
+        "ExtendedEngineType" : {
+          "type" : "string"
+        },
+        "ExtendedDisplacement" : {
+          "type" : "string"
+        },
+        "ExtendedFuelSystem" : {
+          "type" : "string"
+        },
+        "ExtendedTransmissionDescripCont" : {
+          "type" : "string"
+        },
+        "ExtendedTransType" : {
+          "type" : "string"
+        },
+        "ExtendedBestmakename" : {
+          "type" : "string"
+        },
+        "ExtendedBestmodelname" : {
+          "type" : "string"
+        },
+        "ExtendedBeststylename" : {
+          "type" : "string"
+        },
+        "ExtendedBesttrimname" : {
+          "type" : "string"
+        }
+      }
+    },
+    "batchinventorydc##Inventory##listOfVehicles##VehicleInfo" : {
+      "properties" : {
+        "VehicleID" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "DealerID" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "DealerName" : {
+          "type" : "string"
+        },
+        "IsNew" : {
+          "type" : "boolean"
+        },
+        "VIN" : {
+          "type" : "string"
+        },
+        "StockNumber" : {
+          "type" : "string"
+        },
+        "IsCertified" : {
+          "type" : "boolean"
+        },
+        "Year" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "Make" : {
+          "type" : "string"
+        },
+        "Model" : {
+          "type" : "string"
+        },
+        "ModelCode" : {
+          "type" : "string"
+        },
+        "Trim" : {
+          "type" : "string"
+        },
+        "BodyName" : {
+          "type" : "string"
+        },
+        "BodyStyle" : {
+          "type" : "string"
+        },
+        "CityMPG" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "HwyMPG" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "DaysInSotck" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "ValueSource" : {
+          "type" : "string"
+        },
+        "ExteriorColor" : {
+          "type" : "string"
+        },
+        "InteriorColor" : {
+          "type" : "string"
+        },
+        "InteriorMaterial" : {
+          "type" : "string"
+        },
+        "Engine" : {
+          "type" : "string"
+        },
+        "Transmission" : {
+          "type" : "string"
+        },
+        "TransmissionSpeed" : {
+          "type" : "string"
+        },
+        "Comments" : {
+          "type" : "string"
+        },
+        "Comments2" : {
+          "type" : "string"
+        },
+        "Comments3" : {
+          "type" : "string"
+        },
+        "Comments4" : {
+          "type" : "string"
+        },
+        "Comments5" : {
+          "type" : "string"
+        },
+        "InStockDate" : {
+          "type" : "string"
+        },
+        "LastModifiedDate" : {
+          "type" : "string"
+        },
+        "IsSpecial" : {
+          "type" : "string"
+        },
+        "BodyType" : {
+          "type" : "string"
+        },
+        "Locked" : {
+          "type" : "boolean"
+        },
+        "VehicleStatus" : {
+          "type" : "string"
+        },
+        "DealerCertified1" : {
+          "type" : "boolean"
+        },
+        "DealerCertified2" : {
+          "type" : "boolean"
+        },
+        "GenericExteriorColor" : {
+          "type" : "string"
+        },
+        "VideoUrl" : {
+          "type" : "string"
+        },
+        "Drivetrain" : {
+          "type" : "string"
+        },
+        "Mileage" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "Category1" : {
+          "type" : "string"
+        },
+        "Category2" : {
+          "type" : "string"
+        },
+        "Category3" : {
+          "type" : "string"
+        },
+        "Category4" : {
+          "type" : "string"
+        },
+        "Category5" : {
+          "type" : "string"
+        },
+        "ExtendedDescriptions" : {
+          "$ref" : "#/definitions/batchinventorydc##Inventory##listOfVehicles##VehicleInfo##ExtendedDescriptions"
+        },
+        "Style" : {
+          "type" : "string"
+        },
+        "ChromeStyleID" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "ZipCode" : {
+          "type" : "string"
+        },
+        "ExportDealerID" : {
+          "type" : "string"
+        },
+        "EngineFuelType" : {
+          "type" : "string"
+        },
+        "ExteriorGenericColorDescription" : {
+          "type" : "string"
+        },
+        "ExteriorColorCode" : {
+          "type" : "string"
+        }
+      }
+    },
+    "batchinventorydc##Inventory##listOfVehicles##ListOfPhotos" : {
+      "properties" : {
+        "VehiclePhotoID" : {
+          "type" : "string"
+        },
+        "PhotoUrl" : {
+          "type" : "string"
+        },
+        "Order" : {
+          "type" : "number"
+        },
+        "PhotoTimestamp" : {
+          "type" : "string"
+        }
+      }
+    },
+    "batchinventorydc##Inventory##listOfVehicles##ListOfOptions" : {
+      "properties" : {
+        "Code" : {
+          "type" : "string"
+        },
+        "Type" : {
+          "type" : "string"
+        },
+        "Description" : {
+          "type" : "string"
+        },
+        "Header" : {
+          "type" : "string"
+        },
+        "Msrp" : {
+          "type" : "number"
+        },
+        "ImageUrl" : {
+          "type" : "string"
+        },
+        "Order" : {
+          "type" : "number"
+        }
+      }
+    },
+    "batchinventorydc##Inventory##listOfVehicles##Pricing" : {
+      "properties" : {
+        "Cost" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "List" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "Special" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "ExtraPrice1" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "ExtraPrice2" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "ExtraPrice3" : {
+          "type" : "number",
+          "format" : "int32"
+        }
+      }
+    },
+    "batchinventorydc##Inventory##listOfVehicles##PremiumOptions##SubOptions" : {
+      "properties" : {
+        "OptionalOptionID" : {
+          "type" : "string"
+        },
+        "Name" : {
+          "type" : "string"
+        },
+        "Code" : {
+          "type" : "string"
+        },
+        "Msrp" : {
+          "type" : "number"
+        },
+        "Invoice" : {
+          "type" : "number"
+        },
+        "IsChecked" : {
+          "type" : "boolean"
+        },
+        "packageParentID" : {
+          "type" : "string"
+        },
+        "packageID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "batchinventorydc##Inventory##listOfVehicles##PremiumOptions" : {
+      "properties" : {
+        "Code" : {
+          "type" : "string"
+        },
+        "Name" : {
+          "type" : "string"
+        },
+        "SubOptions" : {
+          "type" : "string"
+        },
+        "Msrp" : {
+          "type" : "number"
+        }
+      }
+    },
+    "batchinventorydc##Inventory##listOfVehicles" : {
+      "properties" : {
+        "VehicleInfo" : {
+          "$ref" : "#/definitions/batchinventorydc##Inventory##listOfVehicles##VehicleInfo"
+        },
+        "ListOfPhotos" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/batchinventorydc##Inventory##listOfVehicles##ListOfPhotos"
+          }
+        },
+        "ListOfOptions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/batchinventorydc##Inventory##listOfVehicles##ListOfOptions"
+          }
+        },
+        "Pricing" : {
+          "$ref" : "#/definitions/batchinventorydc##Inventory##listOfVehicles##Pricing"
+        },
+        "ListOfAppliedOffers" : {
+          "type" : "string"
+        },
+        "PremiumOptions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/batchinventorydc##Inventory##listOfVehicles##PremiumOptions"
+          }
+        },
+        "ListOfAvailableOffers" : {
+          "type" : "string"
+        },
+        "ListOfShowOffers" : {
+          "type" : "string"
+        }
+      }
+    },
+    "batchinventorydc##Inventory" : {
+      "properties" : {
+        "listOfVehicles" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/batchinventorydc##Inventory##listOfVehicles"
+          }
+        },
+        "Count" : {
+          "type" : "number",
+          "format" : "int32"
+        }
+      }
+    },
+    "batchinventorydc##Error" : {
+      "properties" : {
+        "Code" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "Message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "batchinventorydc" : {
+      "properties" : {
+        "Inventory" : {
+          "$ref" : "#/definitions/batchinventorydc##Inventory"
+        },
+        "Error" : {
+          "$ref" : "#/definitions/batchinventorydc##Error"
+        },
+        "ResponseDate" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
