@@ -1,0 +1,77 @@
+{
+  "info": {
+    "title": "ALPHA VANTAGE FOREX API",
+    "description": "This API returns intraday time series (timestamp, open, high, low, close) of the FX currency pair specified, updated realtime.",
+    "version": "1.0.0"
+  },
+  "swagger": "2.0",
+  "schemes": [
+    "https"
+  ],
+  "host": "www.alphavantage.co",
+  "basePath": "/",
+  "paths": {
+    "/query": {
+      "get": {
+        "tags": [
+          "Forex Daily Prices (open, high, low, close)"
+        ],
+        "summary": "Call for Checking Forex FX Intraday (5min) Time Series And FX Daily data.",
+        "operationId": "getFxRates",
+        "parameters": [
+          {
+            "name": "function",
+            "description": "Select API function to get either Intra-Day and Daily results",
+            "in": "query",
+            "type": "string",
+            "required": true,
+            "enum": [
+              "FX_INTRADAY",
+              "FX_DAILY"
+            ]
+          },
+          {
+            "name": "from_symbol",
+            "description": "Fill in ISO currency code symbol",
+            "in": "query",
+            "type": "string",
+            "required": true,
+            "default": "EUR"
+          },
+          {
+            "name": "to_symbol",
+            "description": "Fill in ISO currency code symbol",
+            "in": "query",
+            "type": "string",
+            "required": true,
+            "default": "USD"
+          },
+          {
+            "name": "interval",
+            "description": "The value to apply to the FX_INTRADAY filter. Should be populates with a value of 5min only",
+            "in": "query",
+            "type": "string",
+            "required": false,
+            "default": "5min"
+          },
+          {
+            "name": "apikey",
+            "description": "Enter a valid API key received from Alpha Vantage Support",
+            "in": "query",
+            "type": "string",
+            "required": true,
+            "default": "7FUDY2ZMWH01BL66"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "404": {
+            "description": "Not found response"
+          }
+        }
+      }
+    }
+  }
+}
