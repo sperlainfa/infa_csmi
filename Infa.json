@@ -1,0 +1,189 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "www.ercot.com",
+  "basePath" : "/misapp/servlets",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "IceDocListJsonWS" : {
+      "get" : {
+        "tags" : [ "Infa" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "Infa",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "reportTypeId",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Infa"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Infa##security" : {
+      "properties" : {
+        "is_vpn" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "Infa##timezone" : {
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "abbreviation" : {
+          "type" : "string"
+        },
+        "gmt_offset" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "current_time" : {
+          "type" : "string"
+        },
+        "is_dst" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "Infa##flag" : {
+      "properties" : {
+        "emoji" : {
+          "type" : "string"
+        },
+        "unicode" : {
+          "type" : "string"
+        },
+        "png" : {
+          "type" : "string"
+        },
+        "svg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Infa##currency" : {
+      "properties" : {
+        "currency_name" : {
+          "type" : "string"
+        },
+        "currency_code" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Infa##connection" : {
+      "properties" : {
+        "autonomous_system_number" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "autonomous_system_organization" : {
+          "type" : "string"
+        },
+        "connection_type" : {
+          "type" : "string"
+        },
+        "isp_name" : {
+          "type" : "string"
+        },
+        "organization_name" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Infa" : {
+      "properties" : {
+        "ip_address" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "city_geoname_id" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "region" : {
+          "type" : "string"
+        },
+        "region_iso_code" : {
+          "type" : "string"
+        },
+        "region_geoname_id" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "postal_code" : {
+          "type" : "string"
+        },
+        "country" : {
+          "type" : "string"
+        },
+        "country_code" : {
+          "type" : "string"
+        },
+        "country_geoname_id" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "country_is_eu" : {
+          "type" : "boolean"
+        },
+        "continent" : {
+          "type" : "string"
+        },
+        "continent_code" : {
+          "type" : "string"
+        },
+        "continent_geoname_id" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "longitude" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "latitude" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "security" : {
+          "$ref" : "#/definitions/Infa##security"
+        },
+        "timezone" : {
+          "$ref" : "#/definitions/Infa##timezone"
+        },
+        "flag" : {
+          "$ref" : "#/definitions/Infa##flag"
+        },
+        "currency" : {
+          "$ref" : "#/definitions/Infa##currency"
+        },
+        "connection" : {
+          "$ref" : "#/definitions/Infa##connection"
+        }
+      }
+    }
+  }
+}
