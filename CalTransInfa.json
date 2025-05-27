@@ -1,0 +1,470 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "caltrans-gis.dot.ca.gov",
+  "basePath" : "/arcgis/rest/services",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/CHhighway/SHN_Lines/FeatureServer/0" : {
+      "get" : {
+        "tags" : [ "CalTransInfa" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "CalTransInfa",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CalTransInfa"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "CalTransInfa##extractChangesCapabilities" : {
+      "properties" : {
+        "supportsReturnIdsOnly" : {
+          "type" : "boolean"
+        },
+        "supportsReturnExtentOnly" : {
+          "type" : "boolean"
+        },
+        "supportsReturnAttachments" : {
+          "type" : "boolean"
+        },
+        "supportsLayerQueries" : {
+          "type" : "boolean"
+        },
+        "supportsGeometry" : {
+          "type" : "boolean"
+        },
+        "supportsFeatureReturn" : {
+          "type" : "boolean"
+        },
+        "supportsReturnHasGeometryUpdates" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "CalTransInfa##advancedEditingCapabilities" : {
+      "properties" : {
+        "supportsSplit" : {
+          "type" : "boolean"
+        },
+        "supportsReturnServiceEditsInSourceSR" : {
+          "type" : "boolean"
+        },
+        "supportsAsyncApplyEdits" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "CalTransInfa##spatialReference" : {
+      "properties" : {
+        "wkid" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "latestWkid" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "xyTolerance" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "zTolerance" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "mTolerance" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "falseX" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "falseY" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "xyUnits" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "falseZ" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "zUnits" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "falseM" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "mUnits" : {
+          "type" : "number",
+          "format" : "int32"
+        }
+      }
+    },
+    "CalTransInfa##initialExtent##spatialReference" : {
+      "properties" : {
+        "wkid" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "latestWkid" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "xyTolerance" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "zTolerance" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "mTolerance" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "falseX" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "falseY" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "xyUnits" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "falseZ" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "zUnits" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "falseM" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "mUnits" : {
+          "type" : "number",
+          "format" : "int32"
+        }
+      }
+    },
+    "CalTransInfa##initialExtent" : {
+      "properties" : {
+        "xmin" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "ymin" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "xmax" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "ymax" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "spatialReference" : {
+          "$ref" : "#/definitions/CalTransInfa##initialExtent##spatialReference"
+        }
+      }
+    },
+    "CalTransInfa##fullExtent##spatialReference" : {
+      "properties" : {
+        "wkid" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "latestWkid" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "xyTolerance" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "zTolerance" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "mTolerance" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "falseX" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "falseY" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "xyUnits" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "falseZ" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "zUnits" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "falseM" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "mUnits" : {
+          "type" : "number",
+          "format" : "int32"
+        }
+      }
+    },
+    "CalTransInfa##fullExtent" : {
+      "properties" : {
+        "xmin" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "ymin" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "xmax" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "ymax" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "spatialReference" : {
+          "$ref" : "#/definitions/CalTransInfa##fullExtent##spatialReference"
+        }
+      }
+    },
+    "CalTransInfa##documentInfo" : {
+      "properties" : {
+        "Title" : {
+          "type" : "string"
+        },
+        "Author" : {
+          "type" : "string"
+        },
+        "Comments" : {
+          "type" : "string"
+        },
+        "Subject" : {
+          "type" : "string"
+        },
+        "Category" : {
+          "type" : "string"
+        },
+        "Keywords" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CalTransInfa##layers" : {
+      "properties" : {
+        "id" : {
+          "type" : "number"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "parentLayerId" : {
+          "type" : "number"
+        },
+        "defaultVisibility" : {
+          "type" : "boolean"
+        },
+        "subLayerIds" : {
+          "type" : "string"
+        },
+        "minScale" : {
+          "type" : "number"
+        },
+        "maxScale" : {
+          "type" : "number"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "geometryType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CalTransInfa" : {
+      "properties" : {
+        "currentVersion" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "cimVersion" : {
+          "type" : "string"
+        },
+        "serviceDescription" : {
+          "type" : "string"
+        },
+        "hasVersionedData" : {
+          "type" : "boolean"
+        },
+        "hasArchivedData" : {
+          "type" : "boolean"
+        },
+        "hasBranchVersionedData" : {
+          "type" : "boolean"
+        },
+        "supportsDisconnectedEditing" : {
+          "type" : "boolean"
+        },
+        "supportsDatumTransformation" : {
+          "type" : "boolean"
+        },
+        "supportsReturnServiceEditsOption" : {
+          "type" : "boolean"
+        },
+        "returnServiceEditsHaveSR" : {
+          "type" : "boolean"
+        },
+        "supportsQueryDataElements" : {
+          "type" : "boolean"
+        },
+        "datesInUnknownTimezone" : {
+          "type" : "boolean"
+        },
+        "supportsRelationshipsResource" : {
+          "type" : "boolean"
+        },
+        "syncEnabled" : {
+          "type" : "boolean"
+        },
+        "supportedExportFormats" : {
+          "type" : "string"
+        },
+        "extractChangesCapabilities" : {
+          "$ref" : "#/definitions/CalTransInfa##extractChangesCapabilities"
+        },
+        "supportedQueryFormats" : {
+          "type" : "string"
+        },
+        "maxRecordCount" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "maxRecordCountFactor" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "capabilities" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "copyrightText" : {
+          "type" : "string"
+        },
+        "advancedEditingCapabilities" : {
+          "$ref" : "#/definitions/CalTransInfa##advancedEditingCapabilities"
+        },
+        "spatialReference" : {
+          "$ref" : "#/definitions/CalTransInfa##spatialReference"
+        },
+        "initialExtent" : {
+          "$ref" : "#/definitions/CalTransInfa##initialExtent"
+        },
+        "fullExtent" : {
+          "$ref" : "#/definitions/CalTransInfa##fullExtent"
+        },
+        "allowGeometryUpdates" : {
+          "type" : "boolean"
+        },
+        "allowTrueCurvesUpdates" : {
+          "type" : "boolean"
+        },
+        "onlyAllowTrueCurveUpdatesByTrueCurveClients" : {
+          "type" : "boolean"
+        },
+        "supportsApplyEditsWithGlobalIds" : {
+          "type" : "boolean"
+        },
+        "supportsTrueCurve" : {
+          "type" : "boolean"
+        },
+        "units" : {
+          "type" : "string"
+        },
+        "documentInfo" : {
+          "$ref" : "#/definitions/CalTransInfa##documentInfo"
+        },
+        "supportsQueryDomains" : {
+          "type" : "boolean"
+        },
+        "supportsQueryContingentValues" : {
+          "type" : "boolean"
+        },
+        "layers" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/CalTransInfa##layers"
+          }
+        },
+        "tables" : {
+          "type" : "string"
+        },
+        "relationships" : {
+          "type" : "string"
+        },
+        "enableZDefaults" : {
+          "type" : "boolean"
+        },
+        "allowUpdateWithoutMValues" : {
+          "type" : "boolean"
+        },
+        "supportsVCSProjection" : {
+          "type" : "boolean"
+        },
+        "referenceScale" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "serviceItemId" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
