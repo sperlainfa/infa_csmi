@@ -1,0 +1,149 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "deltek.free.beeceptor.com",
+  "basePath" : "/",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "vendor" : {
+      "get" : {
+        "tags" : [ "vendor" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "vendor",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/vendor"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "vendor##data" : {
+      "properties" : {
+        "uuid" : {
+          "type" : "string"
+        },
+        "company_uuid" : {
+          "type" : "string"
+        },
+        "vendor_id" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "account_number" : {
+          "type" : "string"
+        },
+        "address_1" : {
+          "type" : "string"
+        },
+        "address_2" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "zip" : {
+          "type" : "string"
+        },
+        "phone" : {
+          "type" : "string"
+        },
+        "fax" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "web" : {
+          "type" : "string"
+        },
+        "remit_check_name" : {
+          "type" : "string"
+        },
+        "remit_address_1" : {
+          "type" : "string"
+        },
+        "remit_address_2" : {
+          "type" : "string"
+        },
+        "remit_city" : {
+          "type" : "string"
+        },
+        "remit_state" : {
+          "type" : "string"
+        },
+        "remit_zip" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "vendor_status" : {
+          "type" : "string"
+        },
+        "access_codes" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string"
+        },
+        "updated_at" : {
+          "type" : "string"
+        }
+      }
+    },
+    "vendor##pagination" : {
+      "properties" : {
+        "total" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "offset" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "limit" : {
+          "type" : "number",
+          "format" : "int32"
+        }
+      }
+    },
+    "vendor" : {
+      "properties" : {
+        "status" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "data" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/vendor##data"
+          }
+        },
+        "pagination" : {
+          "$ref" : "#/definitions/vendor##pagination"
+        }
+      }
+    }
+  }
+}
