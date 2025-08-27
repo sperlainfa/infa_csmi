@@ -1,0 +1,188 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "dmp-us.informaticacloud.com",
+  "basePath" : "/ma",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/api/v2/user/login" : {
+      "post" : {
+        "tags" : [ "Insert" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "Insert",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : null,
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Insert_Request##body"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Insert"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Insert##roles" : {
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Insert##usergroups" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "orgId" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "createTime" : {
+          "type" : "string"
+        },
+        "updateTime" : {
+          "type" : "string"
+        },
+        "createdBy" : {
+          "type" : "string"
+        },
+        "updatedBy" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Insert" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "orgId" : {
+          "type" : "string"
+        },
+        "orgUuid" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "createTime" : {
+          "type" : "string"
+        },
+        "updateTime" : {
+          "type" : "string"
+        },
+        "createdBy" : {
+          "type" : "string"
+        },
+        "updatedBy" : {
+          "type" : "string"
+        },
+        "sfUsername" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "phone" : {
+          "type" : "string"
+        },
+        "emails" : {
+          "type" : "string"
+        },
+        "timezone" : {
+          "type" : "string"
+        },
+        "serverUrl" : {
+          "type" : "string"
+        },
+        "icSessionId" : {
+          "type" : "string"
+        },
+        "securityQuestion" : {
+          "type" : "string"
+        },
+        "securityAnswer" : {
+          "type" : "string"
+        },
+        "uuid" : {
+          "type" : "string"
+        },
+        "forceChangePassword" : {
+          "type" : "boolean"
+        },
+        "roles" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Insert##roles"
+          }
+        },
+        "usergroups" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Insert##usergroups"
+          }
+        },
+        "spiUrl" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Insert_Request##body" : {
+      "properties" : {
+        "username" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Insert_Request" : {
+      "properties" : {
+        "body" : {
+          "$ref" : "#/definitions/Insert_Request##body"
+        }
+      }
+    }
+  }
+}
