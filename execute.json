@@ -1,0 +1,201 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "dmp-us.informaticacloud.com",
+  "basePath" : "/ma",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/api/v2/job" : {
+      "post" : {
+        "tags" : [ "execute" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "execute",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : null,
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/execute_Request##body"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/execute"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "execute##roles" : {
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        }
+      }
+    },
+    "execute##usergroups" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "orgId" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "createTime" : {
+          "type" : "string"
+        },
+        "updateTime" : {
+          "type" : "string"
+        },
+        "createdBy" : {
+          "type" : "string"
+        },
+        "updatedBy" : {
+          "type" : "string"
+        }
+      }
+    },
+    "execute" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "orgId" : {
+          "type" : "string"
+        },
+        "orgUuid" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "createTime" : {
+          "type" : "string"
+        },
+        "updateTime" : {
+          "type" : "string"
+        },
+        "createdBy" : {
+          "type" : "string"
+        },
+        "updatedBy" : {
+          "type" : "string"
+        },
+        "sfUsername" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "phone" : {
+          "type" : "string"
+        },
+        "emails" : {
+          "type" : "string"
+        },
+        "timezone" : {
+          "type" : "string"
+        },
+        "serverUrl" : {
+          "type" : "string"
+        },
+        "icSessionId" : {
+          "type" : "string"
+        },
+        "securityQuestion" : {
+          "type" : "string"
+        },
+        "securityAnswer" : {
+          "type" : "string"
+        },
+        "uuid" : {
+          "type" : "string"
+        },
+        "forceChangePassword" : {
+          "type" : "boolean"
+        },
+        "roles" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/execute##roles"
+          }
+        },
+        "usergroups" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/execute##usergroups"
+          }
+        },
+        "spiUrl" : {
+          "type" : "string"
+        }
+      }
+    },
+    "execute_Request##body##runtime" : {
+      "properties" : {
+        "@type" : {
+          "type" : "string"
+        }
+      }
+    },
+    "execute_Request##body" : {
+      "properties" : {
+        "@type" : {
+          "type" : "string"
+        },
+        "taskName" : {
+          "type" : "string"
+        },
+        "taskType" : {
+          "type" : "string"
+        },
+        "runtime" : {
+          "$ref" : "#/definitions/execute_Request##body##runtime"
+        }
+      }
+    },
+    "execute_Request" : {
+      "properties" : {
+        "body" : {
+          "$ref" : "#/definitions/execute_Request##body"
+        }
+      }
+    }
+  }
+}
