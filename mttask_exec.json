@@ -1,0 +1,163 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "usw1.dmp-us.informaticacloud.com",
+  "basePath" : "/ma",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/api/v2/job" : {
+      "post" : {
+        "tags" : [ "mttask_exec" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "mttask_exec",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/mttask_exec"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "mttask_exec##roles" : {
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        }
+      }
+    },
+    "mttask_exec##usergroups" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "orgId" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "createTime" : {
+          "type" : "string"
+        },
+        "updateTime" : {
+          "type" : "string"
+        },
+        "createdBy" : {
+          "type" : "string"
+        },
+        "updatedBy" : {
+          "type" : "string"
+        }
+      }
+    },
+    "mttask_exec" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "orgId" : {
+          "type" : "string"
+        },
+        "orgUuid" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "createTime" : {
+          "type" : "string"
+        },
+        "updateTime" : {
+          "type" : "string"
+        },
+        "createdBy" : {
+          "type" : "string"
+        },
+        "updatedBy" : {
+          "type" : "string"
+        },
+        "sfUsername" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "phone" : {
+          "type" : "string"
+        },
+        "emails" : {
+          "type" : "string"
+        },
+        "timezone" : {
+          "type" : "string"
+        },
+        "serverUrl" : {
+          "type" : "string"
+        },
+        "icSessionId" : {
+          "type" : "string"
+        },
+        "securityQuestion" : {
+          "type" : "string"
+        },
+        "securityAnswer" : {
+          "type" : "string"
+        },
+        "uuid" : {
+          "type" : "string"
+        },
+        "forceChangePassword" : {
+          "type" : "boolean"
+        },
+        "roles" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/mttask_exec##roles"
+          }
+        },
+        "usergroups" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/mttask_exec##usergroups"
+          }
+        },
+        "spiUrl" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
