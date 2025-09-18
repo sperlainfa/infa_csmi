@@ -8,7 +8,7 @@
     "contact" : null,
     "license" : null
   },
-  "host" : "na1-dqprofile.dm-us.informaticacloud.com",
+  "host" : "usw1-dqprofile.dmp-us.informaticacloud.com",
   "basePath" : "/profiling-service/api/v1/profile",
   "schemes" : [ "https" ],
   "paths" : {
@@ -56,4 +56,5 @@
       }
     }
   }
+
 }
