@@ -34,7 +34,7 @@
             "description": null,
             "required": true,
             "schema": {
-              "$ref": "#/definitions/IICS_Create_Profile"
+              "type": "string"
             }
           }
         ],
@@ -46,127 +46,5 @@
       }
     }
   },
-  "definitions": {
-    "IICS_Create_Profile##samplingOptions": {
-      "properties": {
-        "samplingType": {
-          "type": "string"
-        }
-      }
-    },
-    "IICS_Create_Profile##source": {
-      "properties": {
-        "properties": {
-          "type": "object"
-        },
-        "name": {
-          "type": "string"
-        },
-        "dataSourceType": {
-          "type": "string"
-        },
-        "schemaType": {
-          "type": "string"
-        },
-        "fields": {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
-        },
-        "rules": {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
-        },
-        "sourceType": {
-          "type": "string"
-        }
-      }
-    },
-    "IICS_Create_Profile##runtimeOptions": {
-      "properties": {
-        "runtimeEnvId": {
-          "type": "string"
-        },
-        "scheduleId": {
-          "type": "string"
-        },
-        "defaultEmailNotification": {
-          "type": "boolean"
-        },
-        "profileAdvProps": {
-          "type": "object"
-        },
-        "successEmailIds": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "failureEmailIds": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "warningEmailIds": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "IICS_Create_Profile": {
-      "properties": {
-        "id": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "frsType": {
-          "type": "string"
-        },
-        "filters": {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
-        },
-        "samplingOptions": {
-          "$ref": "#/definitions/IICS_Create_Profile##samplingOptions"
-        },
-        "isFilterEnabled": {
-          "type": "boolean"
-        },
-        "drillDownType": {
-          "type": "string"
-        },
-        "source": {
-          "$ref": "#/definitions/IICS_Create_Profile##source"
-        },
-        "runtimeOptions": {
-          "$ref": "#/definitions/IICS_Create_Profile##runtimeOptions"
-        },
-        "profileableFields": {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
-        },
-        "connectionId": {
-          "type": "string"
-        },
-        "frsProjectId": {
-          "type": "string"
-        },
-        "frsFolderId": {
-          "type": "string"
-        }
-      }
-    }
-  }
+  "definitions": {}
 }
