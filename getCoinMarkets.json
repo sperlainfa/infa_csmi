@@ -1,0 +1,158 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : null,
+    "version" : "1.0.0",
+    "title" : null,
+    "termsOfService" : null,
+    "contact" : null,
+    "license" : null
+  },
+  "host" : "api.coingecko.com",
+  "basePath" : "/api/v3",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/coins/markets" : {
+      "get" : {
+        "tags" : [ "getCoinMarkets" ],
+        "summary" : null,
+        "description" : null,
+        "operationId" : "getCoinMarkets",
+        "produces" : [ "application/json" ],
+        "consumes" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "per_page",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "vs_currency",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "description" : null,
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/getCoinMarkets"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "getCoinMarkets" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "symbol" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "image" : {
+          "type" : "string"
+        },
+        "current_price" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "market_cap" : {
+          "type" : "number",
+          "format" : "int64"
+        },
+        "market_cap_rank" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "fully_diluted_valuation" : {
+          "type" : "number",
+          "format" : "int64"
+        },
+        "total_volume" : {
+          "type" : "number",
+          "format" : "int64"
+        },
+        "high_24h" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "low_24h" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "price_change_24h" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "price_change_percentage_24h" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "market_cap_change_24h" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "market_cap_change_percentage_24h" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "circulating_supply" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "total_supply" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "max_supply" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "ath" : {
+          "type" : "number",
+          "format" : "int32"
+        },
+        "ath_change_percentage" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "ath_date" : {
+          "type" : "string"
+        },
+        "atl" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "atl_change_percentage" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "atl_date" : {
+          "type" : "string"
+        },
+        "roi" : {
+          "type" : "string"
+        },
+        "last_updated" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
